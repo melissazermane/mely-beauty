@@ -1,0 +1,332 @@
+/* ===================================================
+   commande.css — Styles de la page panier/commande
+=================================================== */
+
+/* ---- Bannière ---- */
+.banniere-page {
+  background: linear-gradient(135deg, var(--rose-pale), #fff0f5);
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  border-bottom: 1px solid var(--rose-clair);
+}
+
+.banniere-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--rose-fonce);
+  margin-bottom: 0.5rem;
+}
+
+.banniere-page p {
+  color: var(--gris-texte);
+  font-size: 1rem;
+}
+
+/* ---- Layout 2 colonnes ---- */
+.page-commande {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  padding: 3rem 1.5rem;
+  align-items: start;
+}
+
+.titre-col {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--noir);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--rose-clair);
+}
+
+/* ---- Panier vide ---- */
+.panier-vide {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--gris-texte);
+}
+
+.panier-vide-icone {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.panier-vide p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Article du panier ---- */
+.article-panier {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--blanc);
+  border: 1px solid #f0f0f0;
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.article-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.article-info {
+  flex: 1;
+}
+
+.article-categorie {
+  font-size: 0.7rem;
+  color: var(--rose-fonce);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.article-nom {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--noir);
+  margin: 0.2rem 0;
+}
+
+.article-prix {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--rose-fonce);
+}
+
+/* Contrôle de quantité */
+.controle-quantite {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.btn-quantite {
+  width: 28px;
+  height: 28px;
+  background-color: var(--rose-pale);
+  border: 1px solid var(--rose-clair);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rose-fonce);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-quantite:hover {
+  background-color: var(--rose-fonce);
+  color: var(--blanc);
+  border-color: var(--rose-fonce);
+}
+
+.valeur-quantite {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--noir);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Bouton supprimer */
+.btn-supprimer {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: color 0.2s ease;
+  padding: 0.3rem;
+}
+
+.btn-supprimer:hover {
+  color: #e53935;
+}
+
+/* ---- Résumé des coûts ---- */
+.resume-panier {
+  background-color: var(--gris-clair);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.ligne-cout {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--gris-texte);
+  padding: 0.4rem 0;
+}
+
+.ligne-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--noir);
+  border-top: 2px solid var(--rose-clair);
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+}
+
+.info-livraison {
+  font-size: 0.78rem;
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+/* ---- Formulaire de commande ---- */
+.col-formulaire {
+  background-color: var(--blanc);
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.champ-groupe {
+  margin-bottom: 1.2rem;
+}
+
+.champ-groupe label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--noir);
+  margin-bottom: 0.4rem;
+}
+
+.champ-groupe input[type="text"],
+.champ-groupe input[type="email"],
+.champ-groupe input[type="tel"],
+.champ-groupe select,
+.champ-groupe textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.champ-groupe input:focus,
+.champ-groupe select:focus,
+.champ-groupe textarea:focus {
+  border-color: var(--rose-fonce);
+  box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.1);
+  background-color: var(--blanc);
+}
+
+.champ-groupe input.invalide,
+.champ-groupe select.invalide {
+  border-color: #e53935;
+}
+
+.champ-groupe input.valide,
+.champ-groupe select.valide {
+  border-color: #4caf50;
+}
+
+.champ-groupe textarea {
+  resize: vertical;
+}
+
+.erreur-champ {
+  display: block;
+  font-size: 0.78rem;
+  color: #c62828;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Fieldset paiement */
+.fieldset-paiement {
+  border: 2px solid var(--rose-clair);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.fieldset-paiement legend {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--rose-fonce);
+  padding: 0 0.5rem;
+}
+
+.modes-paiement {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.mode-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+}
+
+.mode-option input[type="radio"] {
+  accent-color: var(--rose-fonce);
+  width: 15px;
+  height: 15px;
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+  padding: 0.9rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+@media (max-width: 900px) {
+  .page-commande {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .article-panier {
+    flex-wrap: wrap;
+  }
+
+  .banniere-page h1 {
+    font-size: 1.6rem;
+  }
+}

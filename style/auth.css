@@ -1,0 +1,306 @@
+/* ===================================================
+   auth.css — Styles des pages connexion & inscription
+=================================================== */
+
+/* ---- Mise en page générale ---- */
+.page-auth {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--rose-pale) 0%, #fff0f8 100%);
+  padding: 2rem 1.5rem;
+}
+
+.auth-conteneur {
+  display: flex;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--blanc);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(194, 24, 91, 0.12);
+  overflow: hidden;
+}
+
+/* ---- Côté gauche (illustration) ---- */
+.auth-illustration {
+  flex: 1;
+  background: linear-gradient(135deg, var(--rose-fonce), #880e4f);
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-deco {
+  color: var(--blanc);
+  text-align: center;
+}
+
+.auth-deco h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.auth-deco p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.avantages-auth {
+  list-style: none;
+  text-align: left;
+}
+
+.avantages-auth li {
+  font-size: 0.9rem;
+  color: var(--rose-clair);
+  margin-bottom: 0.6rem;
+}
+
+/* ---- Côté droit (formulaire) ---- */
+.auth-formulaire {
+  flex: 1.2;
+  padding: 3rem 2.5rem;
+  overflow-y: auto;
+}
+
+.auth-formulaire h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--noir);
+  margin-bottom: 0.3rem;
+}
+
+.auth-sous-titre {
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+  margin-bottom: 1.5rem;
+}
+
+.auth-sous-titre a {
+  color: var(--rose-fonce);
+  font-weight: 600;
+}
+
+.auth-sous-titre a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Champs de formulaire ---- */
+.champ-groupe {
+  margin-bottom: 1.2rem;
+}
+
+.champ-groupe label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--noir);
+  margin-bottom: 0.4rem;
+}
+
+.champ-groupe input[type="text"],
+.champ-groupe input[type="email"],
+.champ-groupe input[type="password"],
+.champ-groupe input[type="tel"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fafafa;
+}
+
+.champ-groupe input:focus {
+  border-color: var(--rose-fonce);
+  box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.1);
+  background-color: var(--blanc);
+}
+
+/* Champ invalide */
+.champ-groupe input.invalide {
+  border-color: #e53935;
+  background-color: #fff5f5;
+}
+
+/* Champ valide */
+.champ-groupe input.valide {
+  border-color: #4caf50;
+}
+
+/* ---- Erreurs sous les champs ---- */
+.erreur-champ {
+  display: block;
+  font-size: 0.78rem;
+  color: #c62828;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+/* ---- Bouton afficher/masquer mot de passe ---- */
+.input-avec-icone {
+  position: relative;
+}
+
+.input-avec-icone input {
+  padding-right: 3rem;
+}
+
+.toggle-mdp {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--gris-texte);
+}
+
+/* ---- Indicateur force mot de passe ---- */
+.force-mdp {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.barre-force {
+  height: 5px;
+  border-radius: 5px;
+  width: 0;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+#texteForceMdp {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gris-texte);
+}
+
+/* ---- Checkbox conditions ---- */
+.champ-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--gris-texte);
+}
+
+.champ-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--rose-fonce);
+  cursor: pointer;
+}
+
+.champ-checkbox a {
+  color: var(--rose-fonce);
+  font-weight: 600;
+}
+
+/* ---- Rangée double (prénom + nom) ---- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ---- Bouton pleine largeur ---- */
+.btn-block {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  font-size: 1rem;
+}
+
+/* ---- Séparateur ---- */
+.separateur {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+  font-size: 0.78rem;
+  color: #aaa;
+}
+
+.separateur::before,
+.separateur::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #eee;
+}
+
+/* ---- Comptes de démo ---- */
+.comptes-demo {
+  margin-top: 0.5rem;
+}
+
+.demo-titre {
+  font-size: 0.82rem;
+  color: var(--gris-texte);
+  margin-bottom: 0.6rem;
+}
+
+.demo-carte {
+  background-color: var(--rose-pale);
+  border: 1px solid var(--rose-clair);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.demo-carte:hover {
+  background-color: var(--rose-clair);
+}
+
+.demo-carte strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--rose-fonce);
+}
+
+.demo-carte span {
+  font-size: 0.78rem;
+  color: var(--gris-texte);
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+@media (max-width: 768px) {
+  .auth-conteneur {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .auth-illustration {
+    padding: 2rem 1.5rem;
+  }
+
+  .auth-deco h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-formulaire {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

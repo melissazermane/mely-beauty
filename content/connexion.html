@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion - Mely Beauty</title>
+  <link rel="stylesheet" href="../style/global.css" />
+  <link rel="stylesheet" href="../style/auth.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-logo">Mely <span>Beauty</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="commande.html">Panier</a></li>
+        <li><a href="connexion.html" class="active">Connexion</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+      </ul>
+      <a href="commande.html" class="nav-panier">
+        Panier <span class="badge" id="badgePanier" style="display:none;">0</span>
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="page-auth">
+    <section class="auth-conteneur auth-simple">
+
+      <div class="auth-illustration">
+        <div class="auth-deco">
+          <h2>Bon retour <br />chez vous</h2>
+          <p>Connectez-vous pour retrouver vos commandes et tester le projet.</p>
+        </div>
+      </div>
+
+      <div class="auth-formulaire">
+        <h1>Connexion</h1>
+        <p class="auth-sous-titre">
+          Pas encore de compte ? <a href="inscription.html">S'inscrire</a>
+        </p>
+
+        <div class="message-succes" id="msgSucces" style="display:none;"></div>
+        <div class="message-erreur" id="msgErreur" style="display:none;"></div>
+
+        <form id="formConnexion">
+          <div class="champ-groupe">
+            <label for="emailConn">Adresse e-mail</label>
+            <input type="email" id="emailConn" name="email" placeholder="exemple@email.com" />
+            <span class="erreur-champ" id="err-emailConn"></span>
+          </div>
+
+          <div class="champ-groupe">
+            <label for="mdpConn">Mot de passe</label>
+            <div class="input-avec-icone">
+              <input type="password" id="mdpConn" name="motDePasse" />
+              <button type="button" class="toggle-mdp" id="toggleMdpConn">👁</button>
+            </div>
+            <span class="erreur-champ" id="err-mdpConn"></span>
+          </div>
+
+          <div class="champ-checkbox">
+            <input type="checkbox" id="souvenir" name="souvenir" />
+            <label for="souvenir">Se souvenir de moi</label>
+          </div>
+
+          <button type="button" id="btnConnexion" class="btn btn-primaire btn-block">
+            Se connecter
+          </button>
+        </form>
+
+        <div class="separateur">
+          <span>ou tester avec ces comptes</span>
+        </div>
+
+        <div class="comptes-demo">
+          <p class="demo-titre">Comptes de démonstration :</p>
+          <div class="demo-carte" onclick="remplirDemo('amira@melybeauty.dz', 'Amira2024!')">
+            <strong>amira@melybeauty.dz</strong>
+            <span>Mot de passe : Amira2024!</span>
+          </div>
+          <div class="demo-carte" onclick="remplirDemo('admin@melybeauty.dz', 'Admin@2024')">
+            <strong>admin@melybeauty.dz</strong>
+            <span>Mot de passe : Admin@2024</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Mely Beauty</h3>
+        <p>Boutique SheGlam en ligne - L2 Projet</p>
+      </div>
+      <div class="footer-col">
+        <h3>Projet Univ</h3>
+        <a href="../index.html">Accueil</a><br />
+        <a href="produits.html">Produits</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Projet Dev Web</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mely Beauty</p>
+    </div>
+  </footer>
+
+  <script src="../javascript/produits.js"></script>
+  <script src="../javascript/panier.js"></script>
+  <script src="../javascript/auth.js"></script>
+</body>
+
+</html>

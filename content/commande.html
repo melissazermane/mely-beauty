@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ma Commande - Mely Beauty</title>
+  <link rel="stylesheet" href="../style/global.css" />
+  <link rel="stylesheet" href="../style/commande.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-logo">Mely <span>Beauty</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="commande.html" class="active">Panier</a></li>
+        <li><a href="connexion.html" id="lienConnexion">Connexion</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+      </ul>
+      <a href="commande.html" class="nav-panier">
+        Panier <span class="badge" id="badgePanier" style="display:none;">0</span>
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banniere-page">
+      <h1>Ma Commande</h1>
+      <p>Vérifiez votre panier et renseignez vos informations de livraison</p>
+    </section>
+
+    <div class="conteneur page-commande">
+      <section class="col-panier">
+        <h2 class="titre-col">Votre panier</h2>
+
+        <div id="panierVide" class="panier-vide" style="display:none;">
+          <p>Votre panier est vide.</p>
+          <br>
+          <a href="produits.html" class="btn btn-primaire">Aller aux produits</a>
+        </div>
+
+        <div id="listeArticles">
+          <!-- on va generer en js ici -->
+        </div>
+
+        <div class="resume-panier" id="resumePanier">
+          <div class="ligne-cout">
+            <span>Sous-total</span>
+            <span id="sousTotal">0 DA</span>
+          </div>
+          <div class="ligne-cout">
+            <span>Livraison</span>
+            <span id="fraisLivraison">500 DA</span>
+          </div>
+          <div class="ligne-cout ligne-total">
+            <span>Total</span>
+            <span id="totalCommande">0 DA</span>
+          </div>
+          <p class="info-livraison" id="infoLivraison"></p>
+        </div>
+      </section>
+
+      <section class="col-formulaire">
+        <h2 class="titre-col">Informations de livraison</h2>
+
+        <div class="message-succes" id="msgSuccesCmd" style="display:none;">
+          Commande passée avec succès ! Vous serez contacté sous 24h.
+        </div>
+        <div class="message-erreur" id="msgErreurCmd" style="display:none;"></div>
+
+        <form id="formCommande">
+          <div class="form-row">
+            <div class="champ-groupe">
+              <label for="cmdPrenom">Prénom</label>
+              <input type="text" id="cmdPrenom" placeholder="Amira" />
+              <span class="erreur-champ" id="err-cmdPrenom"></span>
+            </div>
+            <div class="champ-groupe">
+              <label for="cmdNom">Nom</label>
+              <input type="text" id="cmdNom" placeholder="Benali" />
+              <span class="erreur-champ" id="err-cmdNom"></span>
+            </div>
+          </div>
+
+          <div class="champ-groupe">
+            <label for="cmdEmail">Adresse e-mail</label>
+            <input type="email" id="cmdEmail" placeholder="exemple@email.com" />
+            <span class="erreur-champ" id="err-cmdEmail"></span>
+          </div>
+
+          <div class="champ-groupe">
+            <label for="cmdTelephone">Téléphone</label>
+            <input type="tel" id="cmdTelephone" placeholder="05XXXXXXXX" />
+            <span class="erreur-champ" id="err-cmdTelephone"></span>
+          </div>
+
+          <div class="champ-groupe">
+            <label for="cmdWilaya">Wilaya</label>
+            <select id="cmdWilaya">
+              <option value="">-- Choisir la wilaya --</option>
+              <option value="Alger">Alger</option>
+              <option value="Oran">Oran</option>
+              <option value="Constantine">Constantine</option>
+              <option value="Annaba">Annaba</option>
+              <option value="Blida">Blida</option>
+              <option value="Tlemcen">Tlemcen</option>
+              <option value="Sétif">Sétif</option>
+              <option value="Batna">Batna</option>
+              <option value="Béjaïa">Béjaïa</option>
+              <option value="Tizi Ouzou">Tizi Ouzou</option>
+              <option value="Autre">Autre</option>
+            </select>
+            <span class="erreur-champ" id="err-cmdWilaya"></span>
+          </div>
+
+          <div class="champ-groupe">
+            <label for="cmdAdresse">Adresse complète</label>
+            <input type="text" id="cmdAdresse" placeholder="N° rue, cité, commune..." />
+            <span class="erreur-champ" id="err-cmdAdresse"></span>
+          </div>
+
+          <fieldset class="fieldset-paiement">
+            <legend>Mode de paiement</legend>
+            <div class="modes-paiement">
+              <label class="mode-option">
+                <input type="radio" name="paiement" value="livraison" checked />
+                <span>Paiement à la livraison</span>
+              </label>
+              <label class="mode-option">
+                <input type="radio" name="paiement" value="cib" />
+                <span>CIB / Dahabia</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="champ-groupe">
+            <label for="cmdNote">Note (optionnelle)</label>
+            <textarea id="cmdNote" rows="3"></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primaire btn-block" id="btnCommanderBtn">
+            Confirmer la commande
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Mely Beauty</h3>
+        <p>Boutique SheGlam en ligne - L2 Projet</p>
+      </div>
+      <div class="footer-col">
+        <h3>Projet Univ</h3>
+        <a href="../index.html">Accueil</a><br />
+        <a href="produits.html">Produits</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Projet Dev Web</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mely Beauty</p>
+    </div>
+  </footer>
+
+  <script src="../javascript/produits.js"></script>
+  <script src="../javascript/panier.js"></script>
+  <script src="../javascript/commande.js"></script>
+</body>
+
+</html>

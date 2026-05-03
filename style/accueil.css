@@ -1,0 +1,299 @@
+/* ===================================================
+   accueil.css — Styles spécifiques à la page d'accueil
+=================================================== */
+
+/* ---- HERO ---- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-contenu {
+  flex: 1;
+  max-width: 540px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: var(--rose-pale);
+  color: var(--rose-fonce);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-contenu h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: var(--noir);
+  margin-bottom: 1.2rem;
+}
+
+.hero-contenu h1 span {
+  color: var(--rose-fonce);
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: var(--gris-texte);
+  margin-bottom: 2rem;
+  max-width: 440px;
+}
+
+.hero-boutons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 480px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(194, 24, 91, 0.18);
+  object-fit: cover;
+  height: 420px;
+}
+
+/* ---- AVANTAGES ---- */
+.avantages {
+  background-color: var(--rose-pale);
+  padding: 2.5rem 1.5rem;
+}
+
+.avantages-liste {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.avantage-item {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.avantage-icone {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.avantage-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--noir);
+  margin-bottom: 0.2rem;
+}
+
+.avantage-item p {
+  font-size: 0.82rem;
+  color: var(--gris-texte);
+}
+
+/* ---- MEILLEURES VENTES ---- */
+.meilleures-ventes {
+  padding: 5rem 1.5rem;
+}
+
+.grille-produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Carte produit (partagée avec produits.css) */
+.carte-produit {
+  background-color: var(--blanc);
+  border-radius: var(--radius);
+  box-shadow: var(--ombre);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-produit:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(194, 24, 91, 0.2);
+}
+
+.carte-produit img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.carte-info {
+  padding: 1rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-categorie {
+  font-size: 0.75rem;
+  color: var(--rose-fonce);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.3rem;
+}
+
+.carte-nom {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--noir);
+  margin-bottom: 0.5rem;
+  flex: 1;
+}
+
+.carte-prix {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rose-fonce);
+  margin-bottom: 0.8rem;
+}
+
+.carte-produit .btn {
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* ---- CATEGORIES ---- */
+.categories {
+  background-color: var(--gris-clair);
+  padding: 5rem 1.5rem;
+}
+
+.categories-grille {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.categorie-carte {
+  background-color: var(--blanc);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  min-width: 130px;
+  flex: 1;
+  max-width: 180px;
+  box-shadow: var(--ombre);
+  transition: all var(--transition);
+}
+
+.categorie-carte:hover {
+  background-color: var(--rose-fonce);
+  color: var(--blanc);
+  transform: translateY(-4px);
+}
+
+.categorie-carte:hover strong {
+  color: var(--blanc);
+}
+
+.cat-emoji {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.categorie-carte strong {
+  font-size: 0.9rem;
+  color: var(--noir);
+  display: block;
+  transition: color var(--transition);
+}
+
+/* ---- BANNIERE PROMO ---- */
+.banniere-promo {
+  background: linear-gradient(135deg, var(--rose-fonce), #880e4f);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.promo-contenu h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--blanc);
+  margin-bottom: 1rem;
+}
+
+.promo-contenu p {
+  color: var(--rose-clair);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banniere-promo .btn-contour {
+  border-color: var(--blanc);
+  color: var(--blanc);
+}
+
+.banniere-promo .btn-contour:hover {
+  background-color: var(--blanc);
+  color: var(--rose-fonce);
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-contenu {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-boutons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-contenu h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-contenu h1 {
+    font-size: 1.8rem;
+  }
+
+  .promo-contenu h2 {
+    font-size: 1.3rem;
+  }
+}

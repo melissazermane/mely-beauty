@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produits - Mely Beauty</title>
+  <link rel="stylesheet" href="../style/global.css" />
+  <link rel="stylesheet" href="../style/produits.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-logo">Mely <span>Beauty</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="produits.html" class="active">Produits</a></li>
+        <li><a href="commande.html">Panier</a></li>
+        <li><a href="connexion.html" id="lienConnexion">Connexion</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+      </ul>
+      <a href="commande.html" class="nav-panier">
+        Panier <span class="badge" id="badgePanier" style="display:none;">0</span>
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banniere-page">
+      <h1>Notre Collection</h1>
+      <p>Tous les produits SheGlam disponibles</p>
+    </section>
+
+    <section class="barre-filtres">
+      <div class="conteneur filtres-conteneur">
+
+        <div class="champ-recherche">
+          <input type="search" id="rechercheProduit" placeholder="Rechercher un produit..." />
+        </div>
+
+        <div class="boutons-filtres">
+          <button class="btn-filtre actif" data-categorie="Tous">Tous</button>
+          <button class="btn-filtre" data-categorie="Lèvres">Lèvres</button>
+          <button class="btn-filtre" data-categorie="Teint">Teint</button>
+          <button class="btn-filtre" data-categorie="Yeux">Yeux</button>
+          <button class="btn-filtre" data-categorie="Sourcils">Sourcils</button>
+          <button class="btn-filtre" data-categorie="Palettes">Palettes</button>
+        </div>
+
+        <div class="tri-produits">
+          <label for="triSelect">Trier par :</label>
+          <select id="triSelect">
+            <option value="defaut">Par défaut</option>
+            <option value="prix-asc">Prix croissant</option>
+            <option value="prix-desc">Prix décroissant</option>
+            <option value="note">Mieux notés</option>
+          </select>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-produits">
+      <div class="conteneur">
+        <p class="compteur-resultats" id="compteurResultats">
+          Affichage de <strong id="nbResultats">...</strong> produit(s)
+        </p>
+
+        <div class="grille-produits" id="grilleProduits">
+          <!-- on insere ici avec catalogue.js -->
+        </div>
+
+        <p class="aucun-resultat" id="aucunResultat" style="display:none;">
+          Aucun produit ne correspond à votre recherche.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Mely Beauty</h3>
+        <p>Boutique SheGlam en ligne - L2 Projet</p>
+      </div>
+      <div class="footer-col">
+        <h3>Projet Univ</h3>
+        <a href="../index.html">Accueil</a><br />
+        <a href="produits.html">Produits</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Projet Dev Web</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mely Beauty</p>
+    </div>
+  </footer>
+
+  <script src="../javascript/produits.js"></script>
+  <script src="../javascript/panier.js"></script>
+  <script src="../javascript/catalogue.js"></script>
+</body>
+
+</html>

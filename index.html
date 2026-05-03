@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mely Beauty - Boutique Maquillage SheGlam</title>
+  <link rel="stylesheet" href="style/global.css" />
+  <link rel="stylesheet" href="style/accueil.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">Mely <span>Beauty</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="content/produits.html">Produits</a></li>
+        <li><a href="content/commande.html">Panier</a></li>
+        <li><a href="content/connexion.html" id="lienConnexion">Connexion</a></li>
+        <li><a href="content/inscription.html">Inscription</a></li>
+      </ul>
+
+      <a href="content/commande.html" class="nav-panier">
+        Panier
+        <span class="badge" id="badgePanier" style="display:none;">0</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-contenu">
+        <p class="hero-badge">Nouvelle collection disponible</p>
+        <h1>La beauté, <br /><span>à votre portée</span></h1>
+        <p class="hero-description">
+          Découvrez la gamme complète SheGlam — des produits de maquillage tendance,
+          longue tenue et 100% cruelty-free.
+        </p>
+        <div class="hero-boutons">
+          <a href="content/produits.html" class="btn btn-primaire">Voir nos produits</a>
+          <a href="#meilleures-ventes" class="btn btn-contour">Tendances</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- image de presentation -->
+        <img src="images/hero.jpg" alt="Collection maquillage SheGlam"
+          onerror="this.src='https://via.placeholder.com/480x420?text=Image+Hero'" />
+      </div>
+    </section>
+
+    <section class="avantages">
+      <div class="conteneur">
+        <ul class="avantages-liste">
+          <li class="avantage-item">
+            <strong>Livraison gratuite</strong>
+            <p>Dès 3 000 DA d'achat</p>
+          </li>
+          <li class="avantage-item">
+            <strong>Produits authentiques</strong>
+            <p>SheGlam officiel</p>
+          </li>
+          <li class="avantage-item">
+            <strong>Cruelty-Free</strong>
+            <p>Aucun test sur animaux</p>
+          </li>
+          <li class="avantage-item">
+            <strong>Paiement sécurisé</strong>
+            <p>CIB, Edahabia et cash</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- injection js ici -->
+    <section class="meilleures-ventes" id="meilleures-ventes">
+      <div class="conteneur">
+        <h2 class="titre-section">Nos best-sellers</h2>
+        <p class="sous-titre-section">Les favoris de notre communauté cette saison</p>
+
+        <div class="grille-produits" id="bestSellers">
+          <!-- TODO: le javascript injecte le html ici. (voir accueil.js) -->
+        </div>
+
+        <div style="text-align:center; margin-top: 2.5rem;">
+          <a href="content/produits.html" class="btn btn-primaire">Voir toute la collection</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="conteneur">
+        <h2 class="titre-section">Nos catégories</h2>
+        <p class="sous-titre-section">Choisissez votre style</p>
+        <div class="categories-grille">
+          <a href="content/produits.html?categorie=Lèvres" class="categorie-carte">
+            <strong>Lèvres</strong>
+          </a>
+          <a href="content/produits.html?categorie=Teint" class="categorie-carte">
+            <strong>Teint</strong>
+          </a>
+          <a href="content/produits.html?categorie=Yeux" class="categorie-carte">
+            <strong>Yeux</strong>
+          </a>
+          <a href="content/produits.html?categorie=Sourcils" class="categorie-carte">
+            <strong>Sourcils</strong>
+          </a>
+          <a href="content/produits.html?categorie=Palettes" class="categorie-carte">
+            <strong>Palettes</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="banniere-promo">
+      <div class="conteneur">
+        <div class="promo-contenu">
+          <h2>Offre spéciale - Livraison offerte</h2>
+          <p>Pour toute commande de plus de 3 000 DA, la livraison est gratuite partout en Algérie.</p>
+          <a href="content/produits.html" class="btn btn-contour">En profiter maintenant</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Mely Beauty</h3>
+        <p>Boutique SheGlam en ligne - L2 Projet</p>
+      </div>
+      <div class="footer-col">
+        <h3>Projet Univ</h3>
+        <a href="index.html">Accueil</a><br />
+        <a href="content/produits.html">Produits</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Projet Dev Web</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mely Beauty</p>
+    </div>
+  </footer>
+
+  <script src="javascript/produits.js"></script>
+  <script src="javascript/panier.js"></script>
+  <script src="javascript/accueil.js"></script>
+</body>
+
+</html>
