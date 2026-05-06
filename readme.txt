@@ -1,5 +1,8 @@
 Projet Dev Web L2 - Site E-commerce Mely Beauty
 
+--- LIEN DE DÉPLOIEMENT ---
+https://melybeauty.netlify.app/
+
 --- DESCRIPTION ---
 Ceci est notre projet pour le module de dev web. C'est un site pour vendre du maquillage (marque sheglam).
 On a utilisé que du HTML, CSS et JS comme demandé, sans framework ni php derrière.
